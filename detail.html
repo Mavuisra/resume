@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Detail</title>
+    <link rel="stylesheet" href="./css/output.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body class="dark:bg-gray-900 bg-gray-100 duration-300 overflow-x-hidden overflow-y-scroll">
+    <main class="w-full overflow-x-hidden">
+        <header class="flex z-50 sticky top-0 w-full bg-white dark:bg-gray-900 justify-between items-center border-b shadow-sm">
+            <div class="p-4">
+                <h1 class="text-xl font-bold text-white bg-blue-600 p-1 px-3 shadow-md rounded-md">israel</h1>
+            </div>
+            <nav class="fixed bottom-0 z-50 w-full bg-white dark:bg-gray-900 border-t lg:border-none flex p-2 lg:p-2 lg:relative">
+                <ul class="flex justify-between lg:justify-center w-full">
+                    <li class=""><a href="./index.html" class="flex flex-col items-center bg-blue-600 shadow-md text-white hover:bg-blue-600 hover:text-white hover:duration-200 rounded-md hover:shadow-md p-2 dark:text-white">
+                        <i class='bx bx-home text-xl'></i>
+                        <span>Home</span>
+                    </a></li>
+                    <li class="ml-5"><a href="./about.html" class="flex flex-col text-blue-950 items-center hover:bg-blue-600 hover:text-white hover:duration-200 rounded-md hover:shadow-md p-2 dark:text-white">
+                        <i class='bx bx-info-circle text-xl' ></i>
+                        <span>About</span>
+                    </a></li>
+                    <li class="ml-5"><a href="./portfolio.html" class="flex flex-col text-blue-950 items-center hover:bg-blue-600 hover:text-white hover:duration-200 rounded-md hover:shadow-md p-2 dark:text-white">
+                        <i class='bx bx-pyramid text-xl'></i>
+                        <span>Portfolio</span>
+                    </a></li>
+                    <li class="ml-5"><a href="./contact.html" class="flex flex-col text-blue-950 items-center hover:bg-blue-600 hover:text-white hover:duration-200 rounded-md hover:shadow-md p-2 dark:text-white">
+                        <i class='bx bxs-contact text-xl'></i>
+                        <span>Contact</span>
+                    </a></li>
+
+                </ul>
+            </nav>
+            <div class="p-4  mr-4">
+                <button id="dark-btn" class="bg-gray-100 shadow-md border border-blue-600/30 text-blue-600 p-2 w-9 h-9 flex justify-center items-center rounded-full dark:bg-white dark:text-black"><i id="toggle-dark" class='bx bx-moon' ></i></button>
+            </div>
+            
+        </header>
+
+        <section class="bg-white dark:bg-gray-800 p-4">
+            <div class="flex justify-center relative mt-4">
+                <p class="absolute text-5xl font-bold opacity-10 text-blue-600">Project</p>
+                <p class="mt-3 text-blue-600 text-2xl font-bold">Project Name</p>
+            </div>
+            <p class="text-center text-gray-500 mt-3">A brief introduction about this project.</p>
+
+            <div class="flex flex-col items-center lg:flex-row lg:justify-center mt-8">
+                <div class="w-full lg:w-1/2 p-4">
+                    <img src="https://i.pinimg.com/474x/c0/ad/ca/c0adcac00d50347860e99e13e20cf8a1.jpg" alt="Project Image" class="w-full h-auto border rounded-md shadow-sm object-cover">
+                </div>
+                <div class="w-full lg:w-1/2 p-4">
+                    <h2 class="text-xl font-bold text-blue-600 mb-3">Project Overview</h2>
+                    <p class="text-gray-600 dark:text-gray-300">Here you can provide a detailed description of the project. Explain the purpose, the technologies used, the challenges faced, and the outcomes. Include any relevant details that showcase the project's scope and your role in it.</p>
+                    <ul class="mt-4 text-gray-600 dark:text-gray-300">
+                        <li><strong>Technology Stack:</strong> HTML, CSS, JavaScript, Python, Django, etc.</li>
+                        <li><strong>Duration:</strong> 3 months</li>
+                        <li><strong>Role:</strong> Full-Stack Developer</li>
+                    </ul>
+                    <a href="#" class="inline-block bg-blue-600 p-2 px-5 rounded-md text-white mt-5">Visit Project</a>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="bg-gray-200 dark:bg-gray-900 p-4 text-center">
+            <p class="text-gray-600 dark:text-gray-400">© 2024 Your Name. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <script>
+        const darkBtn = document.querySelector('#dark-btn')
+        const toggleDark = document.querySelector('#toggle-dark')
+        darkBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark')
+            if (document.documentElement.className === 'dark') {
+                toggleDark.className = 'bx bx-sun'
+            } else {
+                toggleDark.className = 'bx bx-moon'
+            }
+        })
+
+        AOS.init();
+    </script>
+</body>
+</html>
